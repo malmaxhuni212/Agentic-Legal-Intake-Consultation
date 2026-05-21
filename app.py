@@ -40,7 +40,34 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="collapsed",
 )
+import streamlit as st
 
+# Your existing page config must remain the first Streamlit command
+# st.set_page_config(page_title="Legal Intake Dashboard", layout="wide")
+
+# --- HIDE STREAMLIT BRANDING ---
+hide_streamlit_style = """
+    <style>
+    /* Hides the top right menu containing GitHub, Deploy, and Share */
+    [data-testid="stToolbar"] {visibility: hidden !important;}
+    
+    /* Hides the top colored decorative line */
+    [data-testid="stDecoration"] {visibility: hidden !important;}
+    
+    /* Hides the "Made with Streamlit" footer */
+    footer {visibility: hidden !important;}
+    
+    /* Hides the hamburger menu (if it appears) */
+    #MainMenu {visibility: hidden !important;}
+    
+    /* Optional: Hides the entire header area completely to push your app to the very top */
+    [data-testid="stHeader"] {background-color: transparent; visibility: hidden !important;}
+    </style>
+"""
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+# -------------------------------
+
+# The rest of your app code goes here...
 # ---------------------------------------------------------------------------
 # Custom CSS — Premium Dark Glassmorphism Theme
 # ---------------------------------------------------------------------------
