@@ -1,0 +1,5 @@
+streamlit
+groq
+instructor
+pydantic
+requests
